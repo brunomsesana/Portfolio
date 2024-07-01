@@ -1,0 +1,23 @@
+/* Paleta de cores tema escuro: */
+:root{
+    --Primaria: #427488;
+    --Fundo: #1a1616;
+    --FundoSecundario: #4b4b4b;
+    --Botoes: #C7C7C7;
+    --BotoesHover: #a8a8a8;
+    --Positivo: #56AF5F;
+    --Negativo: #D95252;
+    --Texto: #ffffff;
+    --TextoOposto: #000000;
+    --PlaceHolder: #777777;
+}
+/* Paleta de cores tema claro */
+.claro{
+    --Primaria: #427488 !important;
+    --Fundo: #dbdbdb !important;
+    --FundoSecundario: #bebebe !important;
+    --Botoes: #ffffff !important;
+    --Positivo: #56AF5F !important;
+    --Negativo: #D95252 !important;
+    --Texto: #000000 !important;
+}

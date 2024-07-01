@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    margin: 0;
+    background-color: var(--Fundo);
+    color: var(--Texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+table, td, th{
+    text-align: center;
+    border: solid black 1px;
+    border-collapse: collapse;
+}
+table {
+    width: 100%;
+}
+#financas{
+    width: 70%;
+    text-align: center;
+}
+select{
+    width: 24%;
+    height: 30px;
+    margin: 0.1%;
+    border-radius: 10px;
+    background-color: var(--Botoes);
+    border: none;
+    text-align: center;
+    color: var(--TextoOposto);
+}
+input{
+    width: 24%;
+    height: 26px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: var(--Botoes);
+    color: var(--TextoOposto);
+}
+button{
+    margin: 5px;
+    height: 26px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: var(--Botoes);
+    color: var(--TextoOposto);
+}
+button:hover{
+    background-color: var(--BotoesHover);
+}
+input[type="submit"]:hover{
+    background-color: var(--BotoesHover);
+}
+::placeholder{
+    color: var(--PlaceHolder);
+}
+#add-financas{
+    margin-bottom: 20px;
+}
+th{
+    background-color: var(--Primaria);
+}
+td{
+    background-color: var(--FundoSecundario);
+}
+#totais{
+    text-align: left;
+    border: solid var(--Primaria) 10px;
+    background-color: var(--FundoSecundario);
+    border-radius: 15px;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+#header{
+    align-self: flex-start;
+    margin: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#divLang{
+    width: 100%;
+}
+#divSave{
+    text-align: right;
+}
+.aviso{
+    color: var(--Negativo);
+}
