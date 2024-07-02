@@ -13,11 +13,15 @@
 }
 /* Paleta de cores tema claro */
 .claro{
-    --Primaria: #427488 !important;
-    --Fundo: #dbdbdb !important;
-    --FundoSecundario: #bebebe !important;
+    --Primaria: #0881b1 !important;
+    --Fundo: #ebebeb !important;
+    --FundoSecundario: #b6b6b6 !important;
     --Botoes: #ffffff !important;
-    --Positivo: #56AF5F !important;
-    --Negativo: #D95252 !important;
+    --BotoesHover: #e4e4e4;
+    --Positivo: #00880e !important;
+    --Negativo: #c00606 !important;
     --Texto: #000000 !important;
+}
+.claro input, button, select{
+    border: solid 1px black !important;
 }

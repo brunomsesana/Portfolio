@@ -10,37 +10,40 @@
 <body>
     <div id="header">
         <div id="divLang">
-            <button id="mod" onclick="claro(this)"> Modo Claro</button>           
-            <label for="lang">Linguagem: </label>
-            <select name="lang" id="lang" onchange="ChangeLang(this.value)">
-                <option value="pt-br">Português do Brasil</option>
-                <option value="en-us">English (US)</option>
-            </select>
-            <br>
-            <label for="moeda">Moeda: </label>
-            <select name="moeda" id="moeda" onchange="ChangeMoeda(this.value)">
-                <option value="R$" id="R$">Real Brasileiro (R$)</option>
-                <option value="$" id="$">Dólar Americano ($)</option>
-                <option value="€" id="€">Euro (€)</option>
-                <option value="£" id="£">Libra Esterlina (£)</option>
-                <option value="¥" id="¥">Iene Japonês (¥)</option>
-                <option value="C$" id="C$">Dólar Canadense (C$)</option>
-                <option value="A$" id="A$">Dólar Australiano (A$)</option>
-                <option value="CHF" id="CHF">Franco Suíço (CHF)</option>
-                <option value="¥" id="CNY">Yuan Chinês (¥)</option>
-                <option value="₹" id="INR">Rupia Indiana (₹)</option>
-                <option value="₽" id="RUB">Rublo Russo (₽)</option>
-                <option value="₩" id="KRW">Won Sul-Coreano (₩)</option>
-                <option value="R" id="ZAR">Rand Sul-Africano (R)</option>
-                <option value="₺" id="TRY">Lira Turca (₺)</option>
-                <option value="MX$" id="MXN">Peso Mexicano (MX$)</option>
-                <option value="S$" id="SGD">Dólar de Singapura (S$)</option>
-                <option value="NZ$" id="NZD">Dólar Neozelandês (NZ$)</option>
-                <option value="฿" id="THB">Baht Tailandês (฿)</option>
-                <option value="د.إ" id="AED">Dirham dos Emirados Árabes Unidos (د.إ)</option>
-                <option value="﷼" id="SAR">Riyal Saudita (﷼)</option>
-                <option value="₪" id="ILS">Shekel Israelense (₪)</option>
-            </select>
+            <button id="mod" onclick="claro(this)" style="width: 30%">Modo Claro</button>
+            <div>
+                <label for="lang">Linguagem: </label>
+                <select name="lang" id="lang" onchange="ChangeLang(this.value)">
+                    <option value="pt-br">Português do Brasil</option>
+                    <option value="en-us">English (US)</option>
+                </select>
+            </div>
+            <div>
+                <label for="moeda">Moeda: </label>
+                <select name="moeda" id="moeda" onchange="ChangeMoeda(this.value)">
+                    <option value="R$" id="R$">Real Brasileiro (R$)</option>
+                    <option value="$" id="$">Dólar Americano ($)</option>
+                    <option value="€" id="€">Euro (€)</option>
+                    <option value="£" id="£">Libra Esterlina (£)</option>
+                    <option value="¥" id="¥">Iene Japonês (¥)</option>
+                    <option value="C$" id="C$">Dólar Canadense (C$)</option>
+                    <option value="A$" id="A$">Dólar Australiano (A$)</option>
+                    <option value="CHF" id="CHF">Franco Suíço (CHF)</option>
+                    <option value="¥" id="CNY">Yuan Chinês (¥)</option>
+                    <option value="₹" id="INR">Rupia Indiana (₹)</option>
+                    <option value="₽" id="RUB">Rublo Russo (₽)</option>
+                    <option value="₩" id="KRW">Won Sul-Coreano (₩)</option>
+                    <option value="R" id="ZAR">Rand Sul-Africano (R)</option>
+                    <option value="₺" id="TRY">Lira Turca (₺)</option>
+                    <option value="MX$" id="MXN">Peso Mexicano (MX$)</option>
+                    <option value="S$" id="SGD">Dólar de Singapura (S$)</option>
+                    <option value="NZ$" id="NZD">Dólar Neozelandês (NZ$)</option>
+                    <option value="฿" id="THB">Baht Tailandês (฿)</option>
+                    <option value="د.إ" id="AED">Dirham dos Emirados Árabes Unidos (د.إ)</option>
+                    <option value="﷼" id="SAR">Riyal Saudita (﷼)</option>
+                    <option value="₪" id="ILS">Shekel Israelense (₪)</option>
+                </select>
+            </div>
         </div>
         <div id="divSave">
             <button onclick="save()" id="save">Exportar</button>
@@ -72,7 +75,7 @@
             <h3><span id="Total3">Total:</span> <span id="UniTotal"></span><span class="moeda">R$</span><span id="Total">0.00</span></h3>
         </div>
         <input type="file" name="imp" id="imp" accept=".xlsx" onchange="load(this.files[0])" hidden>
-        <h3 class="aviso">O site não mantém os dados, para salvá-los para uso posterior, utilize os botões "Exportar" e "Importar"</h3>
+        <h3 class="aviso" id="avisoSave">O site não mantém os dados, para salvá-los para uso posterior, utilize os botões "Exportar" e "Importar"</h3>
     </div>
     <div id="btns">
 
