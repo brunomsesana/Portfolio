@@ -40,6 +40,9 @@ input{
     background-color: var(--Botoes);
     color: var(--TextoOposto);
 }
+input[type="submit"]{
+    width: 10%;
+}
 button{
     margin: 5px;
     height: 26px;
@@ -97,4 +100,43 @@ td{
 }
 .aviso{
     color: var(--Negativo);
+}
+#mod{
+    width: 30%;
+}
+@media screen and (max-width: 750px) {
+    input, select{
+        width: 35%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    input[type="submit"]{
+        width: 20%;
+    }
+}
+@media screen and (max-width: 500px) {
+    #mod{
+        width: 50%;
+    }
+    input[type="submit"]{
+        width: fit-content;
+    }
+    input, select{
+        width: 50%;
+    }
+    #add-financas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 320px) {
+    #mod{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 250px) {
+    #mod{
+        width: 90%;
+    }
 }

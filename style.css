@@ -4,7 +4,9 @@ body{
     color: var(--Texto);
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    width: 100%;
+    width: calc(100%-50px);
+    animation: color ease-in-out;
+    animation-timeline: scroll();
 }
 a{
     color: var(--Texto);
@@ -12,4 +14,19 @@ a{
 header h1, header h3{
     margin: 0;
     padding: 0;
+}
+header, #projetos, #exps{
+    height: calc(100vh - 60px);
+    padding: 30px;
+}
+@keyframes color{
+    0%{
+        background-color: var(--Primaria);
+    }
+    50%{
+        background-color: var(--Fundo);
+    }
+    100%{
+        background-color: var(--FundoSecundario);
+    }
 }
