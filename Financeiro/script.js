@@ -22,14 +22,14 @@ function addReg(tipo, desc, prec){
     td3.id = "td3(" + quantRows + ")";
     if (tipo == "1"){
         td1.innerHTML = gasto;
-        td1.style = "color: #da5757;"
-        td2.style = "color: #da5757;"
-        td3.style = "color: #da5757;"
+        td1.style = "color: var(--Negativo);"
+        td2.style = "color: var(--Negativo);"
+        td3.style = "color: var(--Negativo);"
     } else if (tipo == "2"){
         td1.innerHTML = receita;
-        td1.style = "color: #5fb45f;"
-        td2.style = "color: #5fb45f;"
-        td3.style = "color: #5fb45f;"
+        td1.style = "color: var(--Positivo);"
+        td2.style = "color: var(--Positivo);"
+        td3.style = "color: var(--Positivo);"
     }
     td2.innerHTML = desc;
     td3.innerHTML = '<span class="moeda">' + moeda + '</span><span id="prec' + quantRows + '">' + prec + '</span>';
@@ -179,9 +179,9 @@ function ChangeLang(valor){
         modClaro = "Light Mode";
         modEscuro = "Dark Mode";
         if (modAtual == 1){
-            document.getElementById("mod").innerHTML = modClaro;
-        } else {
             document.getElementById("mod").innerHTML = modEscuro;
+        } else {
+            document.getElementById("mod").innerHTML = modClaro;
         }
     } else if (valor == "pt-br"){
         document.getElementById("title").innerHTML = "Controle Financeiro";
@@ -228,6 +228,11 @@ function ChangeLang(valor){
         document.getElementById("avisoSave").innerHTML = 'O site não mantém os dados, para salvá-los para uso posterior, utilize os botões "Exportar" e "Importar"';
         modClaro = "Modo Claro";
         modEscuro = "Modo Escuro";
+        if (modAtual == 1){
+            document.getElementById("mod").innerHTML = modEscuro;
+        } else {
+            document.getElementById("mod").innerHTML = modClaro;
+        }
     }
     for (let i in financasTable){
         addReg(financasTable[i].tipo, financasTable[i].desc, financasTable[i].prec);
@@ -321,14 +326,14 @@ function saveEdit(row){
     let prec = document.getElementById("prec" + row).value;
     if (tipo == "1"){
         document.getElementById("td1(" + row + ")").innerHTML = gasto;
-        document.getElementById("td1(" + row + ")").style = "color: #da5757;"
-        document.getElementById("td2(" + row + ")").style = "color: #da5757;"
-        document.getElementById("td3(" + row + ")").style = "color: #da5757;"
+        document.getElementById("td1(" + row + ")").style = "color: var(--Negativo);"
+        document.getElementById("td2(" + row + ")").style = "color: var(--Negativo);"
+        document.getElementById("td3(" + row + ")").style = "color: var(--Negativo);"
     } else if (tipo == "2"){
         document.getElementById("td1(" + row + ")").innerHTML = receita;
-        document.getElementById("td1(" + row + ")").style = "color: #5fb45f;"
-        document.getElementById("td2(" + row + ")").style = "color: #5fb45f;"
-        document.getElementById("td3(" + row + ")").style = "color: #5fb45f;"
+        document.getElementById("td1(" + row + ")").style = "color: var(--Positivo);"
+        document.getElementById("td2(" + row + ")").style = "color: var(--Positivo);"
+        document.getElementById("td3(" + row + ")").style = "color: var(--Positivo);"
     }
     document.getElementById("td2(" + row + ")").innerHTML = desc;
     document.getElementById("td3(" + row + ")").innerHTML = '<span class="moeda">' + moeda + '</span><span id="prec' + row + '">' + prec + '</span>';
