@@ -1,5 +1,11 @@
 body{
-    background-color: #20333c;
+    background-color: var(--Fundo);
+    color: var(--Texto);
+}
+button, input[type="button"]{
+    background-color: var(--Botoes) !important;
+    color: var(--TextoOposto) !important;
+    border: none !important;
 }
 .centralized{
     text-align: center;
@@ -8,7 +14,7 @@ body{
     padding: 20px;
 }
 .window{
-    background-color: #bcc4bc;
+    background-color: var(--FundoSecundario);
     border-radius: 50px;
     overflow-x: auto;
 }
@@ -17,7 +23,7 @@ body{
 }
 .innerWin{
     border-radius: 10px;
-    background-color: #a1eae9;
+    background-color: var(--Primaria);
     padding: 10px;
     margin: 10px;
 }
@@ -28,7 +34,7 @@ body{
     min-width: 70px;
 }
 .ininnerWin{
-    background-color: #788c94;
+    background-color: var(--FundoTerciario);
     border-radius: 10px;
 }
 .savebtn{
@@ -38,12 +44,12 @@ body{
 }
 .panel{
     position: fixed;
-    background-color: #788c94;
+    background-color: var(--FundoTerciario);
     border-radius: 20px;
     overflow: auto;
 }
 .innerPanel{
-    background-color: #20333c;
+    background-color: var(--Fundo);
     width: 95%;
     height: 95%;
     min-height: 600px;
@@ -67,7 +73,7 @@ body{
     max-width: 300px;
 }
 .wtext{
-    color: #bcc4bc;
+    color: var(--FundoSecundario);
 }
 .rolltxt{
     position: absolute;
