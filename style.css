@@ -7,6 +7,7 @@ body{
     width: calc(100%-50px);
     animation: color ease-in-out;
     animation-timeline: scroll();
+    overflow-x: hidden;
 }
 a{
     color: var(--Texto);
@@ -18,6 +19,33 @@ header h1, header h3{
 header, #projetos, #exps{
     height: calc(100vh - 60px);
     padding: 30px;
+    animation: fade ease-in-out;
+    animation-timeline: view();
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+img{
+    border: solid 10px black;
+    border-radius: 30px;
+    width: 80%;
+}
+button{
+    background-color: var(--Botoes);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--TextoOposto);
+}
+#mod{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none !important;
+}
+::placeholder{
+    color: var(--PlaceHolder);
 }
 @keyframes color{
     0%{
@@ -29,4 +57,56 @@ header, #projetos, #exps{
     100%{
         background-color: var(--FundoSecundario);
     }
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+        translate: -100vw;
+    }
+    30%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 1;
+        translate: 0;
+    }
+    60%{
+        opacity: 1;
+        translate: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        translate: 100vw;
+    }
+}
+::-webkit-scrollbar{
+    display: none;
+}
+#scrollbar{
+    position: fixed;
+    width: 10px;
+    height: 50px;
+    right: 0;
+    border-radius: 5px;
+    background-color: var(--Texto);
+    opacity: 0.5;
+    animation: scrollb ease-in-out;
+    animation-timeline: scroll();
+}
+@keyframes scrollb{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: calc(100vh - 50px);
+    }
+}
+.dark, .light{
+    transition: 0.2s;
+}
+.nuvem{
+    transition: 0.1s;
 }

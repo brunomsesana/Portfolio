@@ -98,6 +98,10 @@ button, input[type="button"]{
 button:hover, input[type="button"]:hover, select:hover{
     background-color: var(--BotoesHover) !important;
 }
+#mod{
+    background-color: none !important;
+    border: none;
+}
 /* #region Medias */
 @media (min-width: 992px) {
     .l10{
