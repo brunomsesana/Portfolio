@@ -1,0 +1,341 @@
+body{
+    background-color: var(--Fundo);
+    color: var(--Texto);
+}
+button, input[type="button"]{
+    background-color: var(--Botoes) !important;
+    color: var(--TextoOposto) !important;
+    border: none !important;
+}
+.centralized{
+    text-align: center;
+}
+.pad20{
+    padding: 20px;
+}
+.window{
+    background-color: var(--FundoSecundario);
+    border-radius: 50px;
+    overflow-x: auto;
+}
+.empty{
+    padding-top: 30px;
+}
+.innerWin{
+    border-radius: 10px;
+    background-color: var(--Primaria);
+    padding: 10px;
+    margin: 10px;
+}
+.ih{
+    min-width: 100px;
+}
+.inp{
+    min-width: 70px;
+}
+.ininnerWin{
+    background-color: var(--FundoTerciario);
+    border-radius: 10px;
+}
+.savebtn{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+.panel{
+    position: fixed;
+    background-color: var(--FundoTerciario);
+    border-radius: 20px;
+    overflow: auto;
+}
+.innerPanel{
+    background-color: var(--Fundo);
+    width: 95%;
+    height: 95%;
+    min-height: 600px;
+    min-width: 300px;
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.center{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    transition: 0.5s;
+    max-width: 300px;
+}
+.wtext{
+    color: var(--Texto);
+}
+.claro .rolltxt{
+    color: white;
+}
+.rolltxt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(20px + 4vw);
+}
+.result{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(20px + 4vw);;
+}
+.login{
+    width: fit-content;
+}
+button:hover, input[type="button"]:hover, select:hover{
+    background-color: var(--BotoesHover) !important;
+}
+/* #region Medias */
+@media (min-width: 992px) {
+    .l10{
+        float: left; min-width: 70px; width: 9.5%;
+    }
+    .l25{
+        float: left; min-width: 100px; width: 25%;
+    }
+    .r10{
+        float: right; width: 9.5%;
+    }
+    .r25{
+        float: right; width: 25%;
+    }
+    .divsm{
+        display: auto;
+    }
+    .divlg{
+        display: auto;
+    }
+    .divssm{
+        display: none;
+    }
+    .divsssm{
+        display: none;
+    }
+}
+@media (min-width: 463px) and (max-width: 991px) {
+    .divlg{
+        display: none;
+    }
+    .divsm{
+        display: auto;
+    }
+    .divssm{
+        display: none;
+    }
+    .divsssm{
+        display: none;
+    }
+    .l10{
+        float: left; min-width: 52px; width: 15%;
+    }
+    .r10{
+        float: right; min-width: 52px; width: 15%;
+    }
+    .r25{
+        float: right; min-width: 52px; width: 25%;
+    }
+    .l25{
+        float: left; min-width: 52px; width: 25%;
+    }
+}
+@media (min-width: 338px) and (max-width: 462px) {
+    .divlg{
+        display: none;
+    }
+    .divsm{
+        display: auto;
+    }
+    .divssm{
+        display: auto;
+    }
+    .divsssm{
+        display: none;
+    }
+    .l10{
+        float: left; min-width: 52px; width: 15%;
+    }
+    .r10{
+        float: right; min-width: 52px; width: 15%;
+    }
+    .r25{
+        float: right; min-width: 52px; width: 25%;
+    }
+    .l25{
+        float: left; min-width: 52px; width: 25%;
+    }
+}
+@media (max-width: 337px) {
+    .divlg{
+        display: none;
+    }
+    .divsm{
+        display: auto;
+    }
+    .divssm{
+        display: none;
+    }
+    .divsssm{
+        display: auto;
+    }
+    .l10{
+        float: left; min-width: 52px; width: 15%;
+    }
+    .r10{
+        float: right; min-width: 52px; width: 15%;
+    }
+    .r25{
+        float: right; min-width: 52px; width: 25%;
+    }
+    .l25{
+        float: left; min-width: 52px; width: 25%;
+    }
+}
+@media (min-width: 1400px) {
+    .sk{
+        min-width: 170px;
+        width: 23%;
+        float: left;
+    }
+}
+@media (min-width: 768px) and (max-width: 1399px) {
+    .sk{
+        min-width: 170px;
+        width: 47%;
+        float: left;
+    }
+}
+@media (min-width: 768px) {
+    .panel{
+        width: 50%;
+        left: 25%;
+    }
+}
+@media (max-width: 767px){
+    .panel{
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+}
+@media (min-height: 768px){
+    .panel{
+        height: 80%;
+        top: 10%;
+    }
+}
+@media (max-height: 767px){
+    .panel{
+        height: 100%;
+        top: 0;
+        bottom: 0;
+    }
+}
+@media (min-width: 507px){
+    .th {
+        min-width: 170px;
+    }
+    .attC{
+        width: 70%;
+    }
+    .diceC{
+        width: 20%;
+    }
+}
+@media (min-width: 992px) {
+    .divsmc{
+        display: auto;
+    }
+    .divlgc{
+        display: auto;
+    }
+    .divssmc{
+        display: none;
+    }
+    .divsssmc{
+        display: none;
+    }
+    .clearAtt{
+        display: none;
+    }
+    .rightAtt{
+        display: auto;
+    }
+}
+@media (min-width: 535px) and (max-width: 991px) {
+    .divlgc{
+        display: none;
+    }
+    .divsmc{
+        display: auto;
+    }
+    .divssmc{
+        display: none;
+    }
+    .divsssmc{
+        display: none;
+    }
+    .rightAtt{
+        display: none;
+    }
+}
+@media (min-width: 346px) and (max-width: 534px) {
+    .divlgc{
+        display: none;
+    }
+    .divsmc{
+        display: auto;
+    }
+    .divssmc{
+        display: auto;
+    }
+    .divsssmc{
+        display: none;
+    }
+    .rightAtt{
+        display: none;
+    }
+}
+@media (max-width: 345px) {
+    .divlgc{
+        display: none;
+    }
+    .divsmc{
+        display: auto;
+    }
+    .divssmc{
+        display: none;
+    }
+    .divsssmc{
+        display: auto;
+    }
+    .rightAtt{
+        display: none;
+    }
+}
+@media (min-width: 507px) {
+    .ih{
+        float: left;
+    }
+    .th{
+        float: right;
+    }
+}
+@media (max-width: 506px) {
+    .innerWin{
+        clear: both;
+    }
+}
+/* #endregion */

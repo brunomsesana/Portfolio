@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../colors.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ficha Call of Cthulhu</title>
+</head>
+<body>
+    <div class="container shadow centralized pad20 window">
+        <h1 id="tlt">Call of Cthulhu Automatic Sheet</h1>
+        <p id="dis">Disclaimer: this is a fanmade website to make the sheet easier to use</p>
+    </div>
+    <div class="empty">
+
+    </div>
+    <button id="saveBtn" class="btn btn-primary" style="position: fixed; right: 10px; top: 10px;" onclick="save()">Save</button>
+    <button id="loadBtn" class="btn btn-primary" style="position: fixed; right: 80px; top: 10px;" onclick="document.getElementById('loadsel').click()">Load</button>
+    <button id="loadBtn" class="btn btn-primary" style="position: fixed; right: 10px; top: 50px;" onclick="claro(this)">Modo Claro</button>
+    <input type="file" id="loadsel" accept=".sheet" class="form-control" style="display: none;" onchange="load(this)">
+    <input type="button" value="Load" onclick="document.getElementById('loadsel').click();" style="position: fixed; right: 70px; top: 10px;" class="btn btn-primary" hidden/>
+    <div class="container shadow pad20 centralized window">
+        <select class="form-select" id="lsel" onchange="langu(this.value)">
+            <option value="pt-br" selected>Português Brasileiro</option>
+            <option value="en-us">English</option>
+        </select>
+        <select name="sheetnames" id="sheetnames" class="form-select" onchange="loadSheet()" hidden>
+            <option id="newSh" value="new" selected>New Sheet</option>
+        </select>
+    </div>
+    <div class="empty">
+        
+    </div>
+    <div class="container shadow pad20 centralized window" id="char">
+        <h2 id="charName">Caracteristicas</h2>
+        <div style="width: 20%;" class="container innerWin ih">
+            <div id="characterimgdiv">
+                <img id="characterimg" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/fa3a7d93635679.5e699fbf9de8a.jpg" alt="" style="width: 90%;">
+            </div>
+            <input type="file" id="characterimgsel" accept="image/gif, image/jpeg, image/png" class="form-control" style="display: none;" onchange="img(this)">
+            <input id="btnimg" type="button" value="Browse" onclick="document.getElementById('characterimgsel').click();" style="width: 80%;" class="btn btn-primary"/>
+        </div>
+        <div class="container innerWin th attC">
+            <input onchange="cvalue(this)" type="text" name="name" id="char1" placeholder="Nome do Personagem" class="form-control" style="float: left; width: 50%;">
+            <input onchange="cvalue(this)" type="text" name="player" id="char2" placeholder="Nome do Player" class="form-control" style="float: right; width: 50%;">
+            <div class="pad20"></div>
+            <input onchange="cvalue(this)" type="text" name="occupation" id="char3" style="float: left; width: 50%;" class="form-control" placeholder="Ocupação">
+            <input onchange="cvalue(this)" type="text" name="gen" id="char4" style="float: right; width: 25%;" placeholder="Gênero" class="form-control">
+            <input onchange="cvalue(this)" type="text" name="age" id="char5" style="float: right; width: 25%;" placeholder="Idade" class="form-control">
+            <div class="pad20"></div>
+            <input onchange="cvalue(this)" type="text" name="residence" id="char6" placeholder="Residencia" style="float:left; width:50%;" class="form-control">
+            <input onchange="cvalue(this)" type="text" name="birthplace" id="char7" style="float: right; width: 50%;" placeholder="Naturalidade" class="form-control">
+            <div style="clear: both;"></div>
+        </div>
+        <div style="overflow-x: auto;" class="divsmc container innerWin th attC">
+            <div class="pad20"></div>
+            <div style="min-width: 300px;">
+                <div style="float: left; width: 50%;">
+                    <div style="float: left;">
+                        <h5 style="margin-left: 10px; float: left; margin-right: 10px;" id="strength">Força:</h5>
+                        <div class="clearAtt" style="clear: both;"></div>
+                        <input onchange="cvalue(this)" type="number" name="str" id="att1" class="form-control inp" style="float: left; width: 12.5%;">
+                        <button style="float: left; margin-left: 5px;" class="btn btn-primary" onclick="Roll(this)">Roll</button>
+                    </div>
+                    <div style="float: left;">
+                        <h5 style="margin-left: 10px; float: left; margin-right: 10px;" id="constitution">Constituição:</h5>
+                        <div class="clearAtt" style="clear: both;"></div>
+                        <input onchange="cvalue(this)" type="number" name="con" id="att2" class="form-control inp" style="float: left; width: 12.5%;">
+                        <button style="float: left; margin-left: 5px;" class="btn btn-primary" onclick="Roll(this)">Roll</button>
+                    </div>
+                    <div style="float: left;">
+                        <h5 style="margin-left: 10px; float: left; margin-right: 10px;" id="size">Tamanho:</h5>
+                        <div class="clearAtt" style="clear: both;"></div>
+                        <input onchange="cvalue(this)" type="number" name="siz" id="att3" class="form-control inp" style="float: left; width: 12.5%;">
+                        <button style="float: left; margin-left: 5px;" class="btn btn-primary" onclick="Roll(this)">Roll</button>
+                    </div>
+                    <div style="float: left;">
+                        <h5 style="margin-left: 10px; float: left; margin-right: 10px;" id="dexterity">Destreza:</h5>
+                        <div class="clearAtt" style="clear: both;"></div>
+                        <input onchange="cvalue(this)" type="number" name="dex" id="att4" class="form-control inp" style="float: left; width: 12.5%;">
+                        <button style="float: left; margin-left: 5px;" class="btn btn-primary" onclick="Roll(this)">Roll</button>
+                    </div>
+    
+                </div>
+                <div style="float: right; width: 50%;">
+                    <div style="float: right;">
+                        <h5 class="clearAtt" style="margin-left: 10px; float: right; margin-right: 10px;" id="appearance">Aparencia:</h5>
+                        <div class="clearAtt" style="clear: both;"></div>
+                        <button style="float: right; margin-left: 5px;" class="btn btn-primary" onclick="Roll(this)">Roll</button>
+                        <input onchange="cvalue(this)" type="number" name="app" id="att5" class="form-control inp" style="float: right; width: 12.5%;">
+                        <h5 class="rightAtt" style="margin-left: 10px; float: right; margin-right: 10px;" id="appearance2">Aparencia:</h5>
+                    </div>
+                    <div style="float: right;">
+                        <h5 class="clearAtt" style="margin-left: 10px; float: right; margin-right: 10px;" id="education">Educação:</h5>
+                        <div class="clearAtt" style="clear: both;"></div>
+                        <button style="float: right; margin-left: 5px;" class="btn btn-primary" onclick="Roll(this)">Roll</button>
+                        <input onchange="cvalue(this)" type="number" name="edu" id="att6" class="form-control inp" style="float: right; width: 12.5%;">
+                        <h5 class="rightAtt" style="margin-left: 10px; float: right; margin-right: 10px;" id="education2">Educação:</h5>
+                    </div>
+                    <div style="float: right;">
+                        <h5 class="clearAtt" style="margin-left: 10px; float: right; margin-right: 10px;" id="inteligence">Inteligencia:</h5>
+                        <div class="clearAtt" style="clear: both;"></div>
+                        <button style="float: right; margin-left: 5px;" class="btn btn-primary" onclick="Roll(this)">Roll</button>
+                        <input onchange="cvalue(this)" type="number" name="int" id="att7" class="form-control inp" style="float: right; width: 12.5%;">
+                        <h5 class="rightAtt" style="margin-left: 10px; float: right; margin-right: 10px;" id="inteligence2">Inteligencia:</h5>
+                    </div>
+                    <div style="float: right;">
+                        <h5 class="clearAtt" style="margin-left: 10px; float: right; margin-right: 10px;" id="power">Poder:</h5>
+                        <div class="clearAtt" style="clear: both;"></div>
+                        <button style="float: right; margin-left: 5px;" class="btn btn-primary" onclick="Roll(this)">Roll</button>
+                        <input onchange="cvalue(this)" type="number" name="pow" id="att8" class="form-control inp" style="float: right; width: 12.5%;">
+                        <h5 class="rightAtt" style="margin-left: 10px; float: right; margin-right: 10px;" id="power2">Poder:</h5>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div style="overflow-x: auto;" class="divsm innerWin container th attC">
+            <div class="pad20"></div>
+            <div style="min-width: 330px;">
+                <div style="float: left;">
+                    <h5 style="float: left; margin-right: 10px;" id="hp">Pontos de Vida:</h5>
+                    <input onchange="cvalue(this)" type="number" name="cur1" id="cur1" class="form-control inp l10">
+                    <h5 style="float: left; width: 1%;" class="btn">/</h5>
+                    <input onchange="cvalue(this)" style="margin-right: 10px;" type="number" name="max1" id="max1" class="form-control inp l10">
+                </div>
+                <div style="float: left; min-width: 330px;">
+                    <h5 style="float: left; margin-right: 10px;" id="san">Sanidade:</h5>
+                    <div>
+                        <input onchange="cvalue(this)" type="number" name="cur2" id="cur2" class="form-control inp l10" style="margin-left: 2%;">
+                    </div>
+                    <h5 style="float: left; width: 1%;" class="btn">/</h5>
+                    <input onchange="cvalue(this)" type="number" name="max2" id="max2" class="form-control inp l10" style="display:inline-block;">
+                    <button style="float: left; margin-left: 5px;" class="btn btn-primary" onclick="Roll(document.getElementById('cur2'))">Roll</button>
+                </div>
+                <div style="float: left;">
+                    <h5 style="float: left; margin-right: 10px;" id="mp">Pontos de Magia:</h5>
+                    <input onchange="cvalue(this)" type="number" name="cur3" id="cur3" class="form-control inp l10">
+                    <h5 style="float: left; width: 1%;" class="btn">/</h5>
+                    <input onchange="cvalue(this)" type="number" name="max3" id="max3" class="form-control inp l10" style="margin-right: 2%;">
+                </div>
+                <div style="float:left;">
+                    <h5 style="float: left; margin-right: 10px;" id="luckn">Sorte:</h5>
+                    <input onchange="cvalue(this)" type="number" name="cur4" id="cur4" class="form-control inp l25">
+                    <button style="float: left; margin-left: 5px;" class="btn btn-primary" onclick="Roll(document.getElementById('cur4'))">Roll</button>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <div class="empty">
+        
+    </div>
+    <div class="container shadow pad20 centralized window" style="margin-bottom: 200px;" id="skills">
+        <h2 id="sknam">Perícias</h2>
+        <div style="clear: both;"></div>
+        <div style="clear: both;" class="centralized container" id="customDDiv">
+            <input style="display: inline-block;" class="form-control centralized diceC" type="text" name="custom" id="customd" placeholder="Dados (Ex: 1d4+1d8+5)">
+            <button class="btn btn-primary" onclick="RollCustom()">Roll</button>
+        </div>
+    </div>
+    <input type="text" name="sheetid" id="sheetid" value="new" hidden>
+    <div id="panel" class="panel container shadow" hidden>
+        <div class="innerPanel container">
+            <img id="rollimg" class="center" src="https://i.pinimg.com/originals/0f/f2/90/0ff290c5e91a3025d77a3905e03818eb.png" alt="">
+            <div id="rolltxt" class="wtext rolltxt" hidden>0</div>
+            <div id="result" class="wtext result" hidden>Extreme</div>
+            <button class="btn btn-primary" onclick="document.getElementById('panel').hidden = true">Close</button>
+            <button class="btn btn-primary" onclick="Roll(this)" id="rerollbtn">ReRoll</button>
+            <h5 style="font-size: calc(15px + 0.5vw);" id="using2" class="wtext"></h5>
+            <input hidden type="text" name="using" id="using">
+        </div>
+    </div>
+    <script>
+        function img(t){
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('characterimg').setAttribute('src', e.target.result);
+            }
+            reader.readAsDataURL(t.files[0]);
+        }
+        function load(t){
+            /*var reader = new FileReader();
+            reader.onload = function(e){
+                document.body.innerHTML = e.target.result;
+            }
+            reader.readAsText(t.files[0]);*/
+            var reader = new FileReader();
+            var sheet = '';
+            reader.onload = function(e){
+                loadSheet(e.target.result)
+            }
+            reader.readAsText(t.files[0]);
+        }
+    </script>
+    <script>
+        sheets = [];
+    </script>
+    <script src="FileSaver.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
