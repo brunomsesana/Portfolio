@@ -83,18 +83,28 @@ button{
     }
 }
 ::-webkit-scrollbar{
-    display: none;
-}
-#scrollbar{
-    position: fixed;
     width: 10px;
-    height: 50px;
-    right: 0;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
     border-radius: 5px;
     background-color: var(--Texto);
     opacity: 0.5;
-    animation: scrollb ease-in-out;
-    animation-timeline: scroll();
+}
+.tag{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.typer{
+    overflow: hidden;
+    border-right: .15em solid;
+    white-space: nowrap;
+    letter-spacing: .05em;
+    animation: typing 5s steps(25, end) infinite, blinker 0.75s step-end infinite;
+    max-width: max-content;
+}
+.typer2{
+    animation: typing 10s steps(60, end) infinite, blinker 0.75s step-end infinite !important;
 }
 @keyframes scrollb{
     0%{
@@ -102,6 +112,22 @@ button{
     }
     100%{
         top: calc(100vh - 50px);
+    }
+}
+@keyframes typing{
+    from, to{
+        width: 0;
+    }
+    50%, 80%{
+        width: 100%;
+    }
+}
+@keyframes blinker{
+    from, to{
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
     }
 }
 .dark, .light{
