@@ -1,6 +1,7 @@
 /* Paleta de cores tema escuro: */
 :root{
     --Primaria: #427488;
+    --Secundaria: #472700;
     --Fundo: #1a1616;
     --FundoSecundario: #4b4b4b;
     --FundoTerciario: #3f3f3f;
@@ -11,18 +12,22 @@
     --Texto: #ffffff;
     --TextoOposto: #000000;
     --PlaceHolder: #777777;
+    --Scrollbar: #ffffff80;
 }
 /* Paleta de cores tema claro */
 .claro{
     --Primaria: #0881b1 !important;
+    --Secundaria: #B06109 !important;
     --Fundo: #ebebeb !important;
     --FundoSecundario: #b6b6b6 !important;
+    --FundoTerciario: #7a7a7a !important;
     --Botoes: #ffffff !important;
     --BotoesHover: #e4e4e4 !important;
     --Positivo: #00880e !important;
     --Negativo: #c00606 !important;
     --Texto: #000000 !important;
+    --Scrollbar: #00000080 !important;
 }
-.claro input, button, select{
+.claro input, button, select, textarea{
     border: solid 1px black !important;
 }

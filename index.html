@@ -2,48 +2,123 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
     <link rel="stylesheet" href="colors.css">
     <link rel="stylesheet" href="style.css">
     <title>Bruno - FrontEnd Dev</title>
 </head>
 <body>
-    <script src="script.js"></script>
-    <header>
-        <div id="title">
-            <h1><span class="tag">&lt</span>Bruno Sesana<span class="tag">/&gt</span></h1>
-            <h3 class="typer" style="margin-right: 40px;">Desenvolvedor Front-End</h3>
-        </div>
-        <div id="divImg">
-            <img src="imgs/Photo.png" alt="">
+    <header class="fader">
+        <div id="heade">
+            <div id="title">
+                <h1><span class="tag">&lt</span>Bruno Sesana<span class="tag">/&gt</span></h1>
+                <div id="divSub">
+                    <h3 class="typer">Desenvolvedor Front-End</h3>
+                </div>
+            </div>
+            <div id="divImg">
+                <img src="imgs/Photo.png" alt="">
+            </div>
         </div>
     </header>
-    <div id="projetos">
-        <div>
+    <div id="sobremim" class="fader">
+        <img src="imgs/Photo2.png" alt="" style="width: 25vw; margin: 20px;">
+        <div class="innerText">
+            <h2 class="typer">Sobre mim</h2>
+            <p>Meu nome é Bruno Machado Sesana, tenho 20 anos e sempre fui apaixonado por tecnologia, querendo criar coisas novas com ela. Comecei programando jogos, com meus 12 anos e fui evoluindo nas diferentes linguagens. Hoje tento focar mais na programação web, mas sigo evoluindo em outras areas da programação.</p>
+        </div>
+    </div>
+    <div id="projetos" class="fader">
+        <div id="divProjs">
             <h2 class="typer typer2">Projetos</h2>
-            <div>
-                <a href="Financeiro/index.html"><h3>Financeiro</h3></a>
-                <p>Site desenvolvido como estudo para controle financeiro, com exportação para excel e calculos automáticos</p>
-            </div>
-            <div>
-                <a href="CoCSheet/index.html"><h3>Ficha Automática Call of Cthulhu</h3></a>
-                <p>Site fan-made para facilitar o uso da ficha de RPG (Jogo de interpretação) do sistema Call of Cthulhu</p>
+            <div id="projs">
+                <div class="divProj">
+                    <img src="imgs/Financeiro.png" alt="" style="border: none;">
+                    <a href="Financeiro/index.html"><h3>Financeiro</h3></a>
+                    <p>Site desenvolvido como estudo para controle financeiro, com exportação para excel e calculos automáticos</p>
+                    <div class="icons">
+                        <img src="imgs/icons/html.png" alt="" style="border: none;" class="icon">
+                        <img src="imgs/icons/css.png" alt="" style="border: none;" class="icon">
+                        <img src="imgs/icons/js.png" alt="" style="border: none;" class="icon">
+                        <img src="imgs/icons/sheetjs.png" alt="" style="border: none;" class="icon">
+                    </div>
+                </div>
+                <div class="divProj">
+                    <img src="imgs/PortDan.png" alt="" style="border: none;">
+                    <a href="https://danielmassaroni.github.io"><h3>Portfólio Daniel Massaroni</h3></a>
+                    <p>Desenvolvimento do Portfólio de fotografia para o fotografo Daniel Massaroni</p>
+                    <div class="icons">
+                        <img src="imgs/icons/html.png" alt="" style="border: none;" class="icon">
+                        <img src="imgs/icons/css.png" alt="" style="border: none;" class="icon">
+                        <img src="imgs/icons/js.png" alt="" style="border: none;" class="icon">
+                        <img src="imgs/icons/jquery.png" alt="" style="border: none;" class="icon">
+                        <img src="imgs/icons/zapier.png" alt="" style="border: none;" class="icon">
+                    </div>
+                </div>
+                <div class="divProj">
+                    <img src="imgs/Ficha Automatica de Call of Cthulhu.png" alt="" style="border: none;">
+                    <a href="CoCSheet/index.html"><h3>Ficha Automática Call of Cthulhu</h3></a>
+                    <p>Site fan-made para facilitar o uso da ficha de RPG (Jogo de interpretação) do sistema Call of Cthulhu</p>
+                    <div class="icons">
+                        <img src="imgs/icons/html.png" alt="" style="border: none;" class="icon">
+                        <img src="imgs/icons/css.png" alt="" style="border: none;" class="icon">
+                        <img src="imgs/icons/js.png" alt="" style="border: none;" class="icon">
+                        <img src="imgs/icons/Bootstrap.png" alt="" style="border: none;" class="icon">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div id="exps">
-        <div>
-            <h2 class="typer typer2">Experiências</h2>
+    <div id="habs" class="fader">
+        <div class="fader">
+            <h2 class="typer typer2">Habilidades</h2>
             <div>
-                <h3>Estagiário CEAD - UVV</h3>
-                <p>Abr 2024 - Atualmente</p>
-                <p>Manutenção e publicação das disciplinas EAD, implementação de ferramentas e possíveis usos de IA para melhoria dos processos.</p>
+                <h3>HTML</h3>
+                <input type="range" min="0" max="10" value="7" class="slider" disabled>
             </div>
             <div>
-                <h3>Menor Aprendiz TI - Cedisa</h3>
-                <p>Mar 2022 - Dez 2022</p>
-                <p>Auxiliava a equipe no desenvolvimento e manutenção dos projetos.</p>
+                <h3>JavaScript</h3>
+                <input type="range" min="0" max="10" value="8" class="slider" disabled>
             </div>
+            <div>
+                <h3>CSS</h3>
+                <input type="range" min="0" max="10" value="6" class="slider" disabled>
+            </div>
+            <div>
+                <h3>C#</h3>
+                <input type="range" min="0" max="10" value="4" class="slider" disabled>
+            </div>
+            <div>
+                <h3>Python</h3>
+                <input type="range" min="0" max="10" value="4" class="slider" disabled>
+            </div>
+        </div>
+    </div>
+    <div id="contato" class="fader">
+        <form id="form" action="https://hooks.zapier.com/hooks/catch/19587967/2u42izy/" method="post">
+            <h2>Me mande uma mensagem!<br>Te responderei assim que possível
+            </h2>
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="msg">Mensagem:</label>
+                <textarea name="msg" id="msg" required style="resize: none;"></textarea>
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+        <div style="width: 42vw;">
+            <h2 style="margin: 0;">Outras maneiras de contato:</h2>
+            <p>Celular/Whatsapp: <a href="https://wa.me/5527998955070">(27) 99895-5070</a><br>Linkedin: <a href="https://linkedin.com/in/brunomsesana">brunomsesana</a><br>Github: <a href="https://github.com/brunomsesana">brunomsesana</a><br><a href="https://drive.google.com/file/d/1ZhgKjbi4g1b_bRk73j7B6cBUkHR44W3P/view?usp=sharing">Currículo - Bruno Sesana</a></p>
         </div>
     </div>
     <div id="scrollbar">
@@ -69,5 +144,26 @@
         <path class="light nuvem" style="opacity:0; translate: -40px; stroke:none;fill-rule:evenodd;fill:rgb(77.647059%,72.54902%,54.509804%);fill-opacity:1;" d="M 48.769531 36.3125 C 48.800781 36.273438 48.84375 36.261719 48.894531 36.269531 C 48.894531 36.382812 48.894531 36.492188 48.894531 36.605469 C 48.878906 36.492188 48.835938 36.394531 48.769531 36.3125 Z M 48.769531 36.3125 "/>
         </g>
         </svg></button>
+    <script src="script.js"></script>
+    <script>
+        $("#form").submit(function(e) {
+            $('#form').validate();
+            e.preventDefault();
+
+            var form = $(this);
+            var actionUrl = form.attr('action');
+
+            $.ajax({
+                type: "POST",
+                url: actionUrl,
+                data: form.serialize(),
+                success: function(data)
+                {
+                    $('#form').html('<h2>Mensagem enviada!</h2>');
+                }
+            });
+
+        });
+    </script>
 </body>
 </html>

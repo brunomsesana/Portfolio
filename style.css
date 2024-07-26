@@ -4,10 +4,11 @@ body{
     color: var(--Texto);
     font-family: 'Poppins', sans-serif;
     margin: 0;
+    padding: 0;
     width: calc(100%-50px);
+    overflow-x: hidden;
     animation: color ease-in-out;
     animation-timeline: scroll();
-    overflow-x: hidden;
 }
 a{
     color: var(--Texto);
@@ -16,11 +17,67 @@ header h1, header h3{
     margin: 0;
     padding: 0;
 }
-header, #projetos, #exps{
-    height: calc(100vh - 60px);
+/*
+#projetos, #habs, #contato{
+    padding-top: 200px !important;
+} */
+#habs div{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#habs div h3{
+    width: 100%;
+}
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 70vw;
+    height: 25px;
+    background: var(--Botoes);
+    outline: none;
+    opacity: 0.7;
+    border-radius: 20px;
+    timeline-scope: var(--Primaria);
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: transparent;
+}
+.fader{
+    min-height: calc(100vh - 60px);
     padding: 30px;
     animation: fade ease-in-out;
     animation-timeline: view();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+#habs div{
+    height: auto !important;
+}
+#sobremim{
+    align-items: center;
+    justify-content: center;
+}
+#heade{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -47,14 +104,42 @@ button{
 ::placeholder{
     color: var(--PlaceHolder);
 }
+.innerText{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 50px;
+}
+.icon{
+    width: 20% !important;
+    border-radius: 0;
+}
 @keyframes color{
     0%{
         background-color: var(--Primaria);
     }
-    50%{
+    15%{
+        background-color: var(--Primaria);
+    }
+    20%{
         background-color: var(--Fundo);
     }
-    100%{
+    35%{
+        background-color: var(--Fundo);
+    }
+    40%{
+        background-color: var(--FundoTerciario);
+    }
+    55%{
+        background-color: var(--FundoTerciario);
+    }
+    60%{
+        background-color: var(--Secundaria);
+    }
+    75%{
+        background-color: var(--Secundaria);
+    }
+    80%{
         background-color: var(--FundoSecundario);
     }
 }
@@ -78,7 +163,6 @@ button{
         opacity: 0;
     }
     100%{
-        opacity: 0;
         translate: 100vw;
     }
 }
@@ -88,8 +172,7 @@ button{
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 5px;
-    background-color: var(--Texto);
-    opacity: 0.5;
+    background-color: var(--Scrollbar);
 }
 .tag{
     font-family:Arial, Helvetica, sans-serif;
@@ -105,6 +188,9 @@ button{
 }
 .typer2{
     animation: typing 10s steps(60, end) infinite, blinker 0.75s step-end infinite !important;
+}
+#title h3{
+    margin-right: 40px;
 }
 @keyframes scrollb{
     0%{
@@ -127,7 +213,7 @@ button{
         border-color: transparent;
     }
     50% {
-        border-color: white;
+        border-color: var(--Texto);
     }
 }
 .dark, .light{
@@ -135,4 +221,104 @@ button{
 }
 .nuvem{
     transition: 0.1s;
+}
+.divProj{
+    background-color: var(--FundoSecundario);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 20%;
+    margin: 20px;
+}
+.divProj img{
+    width: 80%;
+}
+#projs{
+    display: flex;
+    justify-content: center;
+}
+#divProjs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contato{
+    flex-direction: column;
+}
+#contato form div{
+    margin: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+#contato form div input, #contato form div textarea{
+    width: 40vw;
+    border-radius: 15px;
+    border: solid 1px transparent;
+}
+#contato form div input{
+    height: 30px;
+}
+#contato form div textarea{
+    height: 100px;
+}
+#contato form div input[type="submit"]{
+    align-self: center;
+}
+@media (max-width: 840px) {
+    #contato form div input, #contato form div textarea{
+        width: 100%;
+    }
+}
+@media (max-width: 700px){
+    #heade{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    #title h3{
+        margin-right: 0;
+    }
+    #divImg{
+        width: 60vw;
+    }
+    #divSub{
+        display: flex;
+        justify-content: center;
+    }
+    #projs{
+        flex-direction: column;
+        align-items: center;
+    }
+    .divProj{
+        width: 80%;
+    }
+    #sobremim{
+        flex-direction: column;
+    }
+    #sobremim img{
+        width: 60vw !important;
+    }
+    .innerText{
+        width: 100%;
+    }
+    @keyframes fade{
+        0%{
+            opacity: 0;
+            translate: -100vw;
+        }
+        30%{
+            opacity: 1;
+            translate: 0;
+        }
+        80%{
+            opacity: 1;
+            translate: 0;
+        }
+        100%{
+            translate: 100vw;
+        }
+    }
 }
