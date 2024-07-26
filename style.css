@@ -265,6 +265,9 @@ button{
 #contato form div input[type="submit"]{
     align-self: center;
 }
+#outCont{
+    width: 42vw;
+}
 @media (max-width: 840px) {
     #contato form div input, #contato form div textarea{
         width: 100%;
@@ -320,5 +323,8 @@ button{
         100%{
             translate: 100vw;
         }
+    }
+    #outCont{
+        width: 100%;
     }
 }
