@@ -66,8 +66,7 @@ header h1, header h3{
     border: none;
 }
 .fader{
-    min-height: calc(100vh - 60px);
-    padding: 30px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,31 +124,34 @@ button{
 }
 @keyframes color{
     0%{
-        background-color: var(--Primaria);
+        background-color: var(--FundoPort1);
     }
-    15%{
-        background-color: var(--Primaria);
+    10%{
+        background-color: var(--FundoPort1);
     }
     20%{
-        background-color: var(--Fundo);
+        background-color: var(--FundoPort2);
     }
-    35%{
-        background-color: var(--Fundo);
+    30%{
+        background-color: var(--FundoPort2);
     }
     40%{
-        background-color: var(--FundoTerciario);
+        background-color: var(--FundoPort3);
     }
-    55%{
-        background-color: var(--FundoTerciario);
+    50%{
+        background-color: var(--FundoPort3);
     }
-    60%{
-        background-color: var(--Secundaria);
+    65%{
+        background-color: var(--FundoPort4);
     }
     75%{
-        background-color: var(--Secundaria);
+        background-color: var(--FundoPort4);
     }
-    80%{
-        background-color: var(--FundoSecundario);
+    85%{
+        background-color: var(--FundoPort5);
+    }
+    100%{
+        background-color: var(--FundoPort5);
     }
 }
 @keyframes fade{
