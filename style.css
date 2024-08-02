@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    overflow-x: hidden;
+}
 body{
     background-color: var(--Fundo);
     color: var(--Texto);
@@ -6,9 +9,12 @@ body{
     margin: 0;
     padding: 0;
     width: calc(100%-50px);
-    overflow-x: hidden;
-    animation: color ease-in-out;
-    animation-timeline: scroll();
+}
+@supports (animation-timeline: scroll()){
+    body{
+        animation: color ease-in-out;
+        animation-timeline: scroll();
+    }
 }
 a{
     color: var(--Texto);
@@ -63,12 +69,16 @@ header h1, header h3{
 .fader{
     min-height: calc(100vh - 60px);
     padding: 30px;
-    animation: fade ease-in-out;
-    animation-timeline: view();
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
+}
+@supports (animation-timeline: view()){
+    .fader{
+        animation: fade ease-in-out;
+        animation-timeline: view();
+    }
 }
 #habs div{
     height: auto !important;
@@ -265,9 +275,6 @@ button{
 #contato form div input[type="submit"]{
     align-self: center;
 }
-#outCont{
-    width: 42vw;
-}
 @media (max-width: 840px) {
     #contato form div input, #contato form div textarea{
         width: 100%;
@@ -323,8 +330,5 @@ button{
         100%{
             translate: 100vw;
         }
-    }
-    #outCont{
-        width: 100%;
     }
 }
