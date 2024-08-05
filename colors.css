@@ -32,11 +32,11 @@
     --Negativo: #c00606 !important;
     --Texto: #000000 !important;
     --Scrollbar: #00000080 !important;
-    --FundoPort1: #0881b1;
-    --FundoPort2: #425E87;
-    --FundoPort3: #428785;
-    --FundoPort4: #43466b;
-    --FundoPort5: #12132c;
+    --FundoPort1: #0881b1 !important;
+    --FundoPort2: #598ad3 !important;
+    --FundoPort3: #499e9b !important;
+    --FundoPort4: #777dc9 !important;
+    --FundoPort5: #9c9ed1 !important;
 }
 .claro input, button, select, textarea{
     border: solid 1px black !important;

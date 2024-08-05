@@ -32,7 +32,6 @@ function escuro(el){
     modAtual = 0;
 }
 function updateGradient(s) {
-    console.log(s);
     const percentage = (s.value - s.min) / (s.max - s.min) * 100;
     s.style.backgroundImage = 'linear-gradient(90deg, var(--Primaria) ' + percentage + '%, transparent ' + percentage + '%)';
 }

@@ -73,9 +73,22 @@ header h1, header h3{
     padding-left: 30px;
     padding-right: 30px;
 }
+.fader2{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 @supports (animation-timeline: view()){
     .fader{
         animation: fade ease-in-out;
+        animation-timeline: view();
+        opacity: 0;
+    }
+    .fader2{
+        animation: fade2 ease-in-out;
         animation-timeline: view();
         opacity: 0;
     }
@@ -140,16 +153,16 @@ button{
     40%{
         background-color: var(--FundoPort3);
     }
-    50%{
+    60%{
         background-color: var(--FundoPort3);
     }
-    65%{
-        background-color: var(--FundoPort4);
-    }
-    75%{
+    70%{
         background-color: var(--FundoPort4);
     }
     85%{
+        background-color: var(--FundoPort4);
+    }
+    95%{
         background-color: var(--FundoPort5);
     }
     100%{
@@ -179,6 +192,29 @@ button{
         translate: 100vw;
     }
 }
+@keyframes fade2{
+    0%{
+        opacity: 0;
+        translate: -100vw;
+    }
+    20%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+        translate: 0;
+    }
+    70%{
+        opacity: 1;
+        translate: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        translate: 100vw;
+    }
+}
 ::-webkit-scrollbar{
     width: 10px;
     background-color: transparent;
@@ -202,7 +238,7 @@ button{
 .typer2{
     animation: typing 10s steps(60, end) infinite, blinker 0.75s step-end infinite !important;
 }
-#title h3{
+#title{
     margin-right: 40px;
 }
 @keyframes scrollb{
@@ -249,6 +285,7 @@ button{
 #projs{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 #divProjs{
     display: flex;
@@ -291,7 +328,7 @@ button{
         text-align: center;
         width: 100%;
     }
-    #title h3{
+    #title{
         margin-right: 0;
     }
     #divImg{
@@ -333,5 +370,25 @@ button{
         100%{
             translate: 100vw;
         }
+    }
+    @keyframes fade2{
+        0%{
+            opacity: 0;
+            translate: -100vw;
+        }
+        15%{
+            opacity: 1;
+            translate: 0;
+        }
+        85%{
+            opacity: 1;
+            translate: 0;
+        }
+        100%{
+            translate: 100vw;
+        }
+    }
+    #outCont{
+        width: 100% !important;
     }
 }
