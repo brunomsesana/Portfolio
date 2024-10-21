@@ -25,11 +25,21 @@ header h1, header h3{
 #projetos, #habs, #contato{
     padding-top: 200px !important;
 } */
-#habs div{
-    text-align: left;
+#habs{
     display: flex;
     flex-direction: column;
+}
+#habsdiv{
+    text-align: center;
+    display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    height: 70vh !important;
+    align-items: center;
+    justify-content: center;
+}
+#habsdiv div{
+    margin: 0 5px;
 }
 #habs div h3{
     width: 100%;
@@ -37,7 +47,7 @@ header h1, header h3{
 .slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 70vw;
+    width: 30vw;
     height: 25px;
     background: var(--Botoes);
     outline: none;
@@ -92,9 +102,6 @@ header h1, header h3{
         animation-timeline: view();
         opacity: 0;
     }
-}
-#habs div{
-    height: auto !important;
 }
 #sobremim{
     align-items: center;
