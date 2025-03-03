@@ -1,0 +1,14 @@
+.projetos{
+    height: 100vh;
+    scroll-snap-align: top;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cards{
+    display: flex;
+
+}

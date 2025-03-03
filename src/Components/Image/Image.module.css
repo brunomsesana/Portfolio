@@ -1,0 +1,13 @@
+.img{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+    border: 5px solid var(--Texto);
+}
+
+@media screen and (max-width: 900px) {
+    .img{
+        width: 40vh;
+        min-width: 200px;
+    }
+}
