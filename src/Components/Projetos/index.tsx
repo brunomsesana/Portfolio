@@ -10,7 +10,7 @@ import { useContext } from 'react'
 import Scroll from '../Scroll'
 
 export default function Projetos(){
-    const { lang, setLang } = useContext(langContext);
+    const { lang } = useContext(langContext);
     return (
         <section className={styles.projetos + " fader2"}>
             <h2 className='typer'>{lang == 'pt-BR' ? "Projetos" : "Projects"}</h2>

@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import langContext from '../Language/langContext';
 
 export default function SobreMim(){
-    const { lang, setLang } = useContext(langContext);
+    const { lang } = useContext(langContext);
     return (
         <section className={styles.sobremim + " fader2"}>
             <div className={styles.tudo}>

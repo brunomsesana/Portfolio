@@ -7,7 +7,7 @@ import langContext from '../Language/langContext';
 import { useContext } from 'react';
 
 export default function Header(){
-    const {lang, setLang} = useContext(langContext);
+    const {lang} = useContext(langContext);
     return(
         <header className={styles.header + " fader"}>
             <Language></Language>

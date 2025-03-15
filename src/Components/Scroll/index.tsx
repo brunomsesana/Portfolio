@@ -1,5 +1,4 @@
 import styles from "./Scroll.module.css"
-import scroll from "../../assets/scroll.svg"
 
 export default function Scroll(){
     return (
