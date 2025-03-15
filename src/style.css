@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    font-family: 'Poppins';
+    width: 100vw;
+    background-color: var(--Fundo);
+    overflow-x: hidden;
+    margin: 0;
+    color: var(--Texto);
+}
+.typer{
+    overflow: hidden;
+    animation: typing 5s steps(25, end) infinite;
+    white-space: nowrap;
+    max-width: max-content;
+    letter-spacing: .05em;
+    border-right: 2px solid var(--Texto);
+}
+
+a{
+    color: var(--Clicavel);   
+}
+a:visited{
+    color: var(--Clicavel);
+}
+a:hover{
+    color: var(--ClicavelHover) !important;
+}
+
+@keyframes typing {
+    from, to{
+        width: 0;
+        border-color: transparent;
+    }
+    50%, 80%{
+        width: 100%;
+    }
+    10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%{
+        border-color: var(--Texto);
+    }
+    05%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95%{
+        border-color: transparent;
+    }
+}
+
+@supports (animation-timeline: view()){
+    .fader{
+        animation: fade ease-in-out;
+        animation-timeline: view();
+        opacity: 0;
+    }
+    .fader2{
+        animation: fade2 ease-in-out;
+        animation-timeline: view();
+    }
+    @media screen and (max-width: 900px) {
+        .fader2{
+            animation: fade2 ease-in-out;
+            animation-timeline: view();
+            opacity: 0;
+        }
+    }
+    
+    body{
+        animation: color ease-in-out;
+        animation-timeline: view();
+    }
+}
+
+@keyframes color{
+    0%{
+        background-color: var(--FundoPort1);
+    }
+    20%{
+        background-color: var(--FundoPort1);
+    }
+    30%{
+        background-color: var(--FundoPort2);
+    }
+    50%{
+        background-color: var(--FundoPort2);
+    }
+    60%{
+        background-color: var(--FundoPort3);
+    }
+    70%{
+        background-color: var(--FundoPort3);
+    }
+    80%{
+        background-color: var(--FundoPort4);
+    }
+    100%{
+        background-color: var(--FundoPort4);
+    }
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+        translate: -100vw;
+    }
+    30%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 1;
+        translate: 0;
+    }
+    60%{
+        opacity: 1;
+        translate: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        translate: 100vw;
+    }
+}
+
+@keyframes fade2{
+    0%{
+        opacity: 0;
+        translate: -100vw;
+    }
+    20%{
+        opacity: 1;
+        translate: 0;
+    }
+    90%{
+        opacity: 1;
+        translate: 0;
+    }
+    100%{
+        opacity: 0;
+        translate: 100vw;
+    }
+}

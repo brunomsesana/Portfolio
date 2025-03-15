@@ -1,0 +1,19 @@
+.lang{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+}
+.button{
+    background-color: transparent;
+    border: none !important;
+}
+.button:hover{
+    filter: brightness(1.25);
+}
+.button:active{
+    filter: brightness(5);
+}
+.button:disabled{
+    filter: brightness(0.5) !important;
+}

@@ -1,0 +1,39 @@
+.header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px;
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+.header h1, .header h2{
+    margin: 0;
+}
+.divFlex{
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 900px) {
+    .header{
+        flex-direction: column;
+    }
+    .divFlex{
+        width: 90%;
+        min-width: 300px;
+    }
+    .scroll{
+        position: absolute;
+        right: 5px;
+        bottom: 0;
+        filter: invert();
+        width: 20vw;
+    }
+}
