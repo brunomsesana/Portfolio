@@ -1,0 +1,25 @@
+.scroll{
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+    left: 10px;
+    align-items: center;
+    padding: 10px;
+    transition: 0.2s;
+}
+.scroll:hover{
+    scale: 1.3;
+}
+.scroll path{
+    fill: white;
+}
+.scroll p{
+    margin: 5px;
+}
+.scroll img{
+    filter: invert();
+    margin: 5px;
+}
+.claro .scroll img{
+    filter: none;
+}

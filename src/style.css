@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html{
+    scroll-snap-type: y mandatory;
+}
+
 body{
     font-family: 'Poppins';
     width: 100vw;
@@ -49,6 +53,18 @@ a:hover{
         animation-timeline: view();
         opacity: 0;
     }
+    .fader2{
+        animation: fade2 ease-in-out;
+        animation-timeline: view();
+    }
+    @media screen and (max-width: 900px) {
+        .fader2{
+            animation: fade2 ease-in-out;
+            animation-timeline: view();
+            opacity: 0;
+        }
+    }
+    
     body{
         animation: color ease-in-out;
         animation-timeline: view();
@@ -59,32 +75,26 @@ a:hover{
     0%{
         background-color: var(--FundoPort1);
     }
-    10%{
-        background-color: var(--FundoPort1);
-    }
     20%{
-        background-color: var(--FundoPort2);
+        background-color: var(--FundoPort1);
     }
     30%{
         background-color: var(--FundoPort2);
     }
-    40%{
-        background-color: var(--FundoPort3);
+    50%{
+        background-color: var(--FundoPort2);
     }
     60%{
         background-color: var(--FundoPort3);
     }
     70%{
-        background-color: var(--FundoPort4);
+        background-color: var(--FundoPort3);
     }
-    85%{
+    80%{
         background-color: var(--FundoPort4);
-    }
-    95%{
-        background-color: var(--FundoPort5);
     }
     100%{
-        background-color: var(--FundoPort5);
+        background-color: var(--FundoPort4);
     }
 }
 
@@ -108,6 +118,25 @@ a:hover{
         opacity: 0;
     }
     100%{
+        translate: 100vw;
+    }
+}
+
+@keyframes fade2{
+    0%{
+        opacity: 0;
+        translate: -100vw;
+    }
+    20%{
+        opacity: 1;
+        translate: 0;
+    }
+    90%{
+        opacity: 1;
+        translate: 0;
+    }
+    100%{
+        opacity: 0;
         translate: 100vw;
     }
 }

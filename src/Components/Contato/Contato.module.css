@@ -1,0 +1,30 @@
+.divForm{
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.divForm div{
+    margin: 10px;
+}
+.form div{
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form div input, .form div textarea{
+    border-radius: 15px;
+    border: 1px solid transparent !important;
+    height: 30px;
+}
+.form div textarea{
+    height: 100px;
+}
+.form div input:active, .form div input:active{
+    border: 1px solid black !important;
+}

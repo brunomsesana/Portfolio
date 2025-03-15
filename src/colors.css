@@ -15,10 +15,9 @@
     --Scrollbar: #ffffff80;
     --FundoPort1: #427488;
     --FundoPort2: #425E87;
-    --FundoPort3: #428785;
-    --FundoPort4: #43466b;
-    --FundoPort5: #12132c;
-    --Clicavel: #c9d7ed;
+    --FundoPort3: #43466b;
+    --FundoPort4: #12132c;
+    --Clicavel: #e3e9f1;
     --ClicavelHover: #557fcc; 
 }
 /* Paleta de cores tema claro */
@@ -36,9 +35,8 @@
     --Scrollbar: #00000080 !important;
     --FundoPort1: #5ce1e6 !important;
     --FundoPort2: #59b0d9 !important;
-    --FundoPort3: #59d9ad !important;
-    --FundoPort4: #868ce3 !important;
-    --FundoPort5: #9c9ed1 !important;
+    --FundoPort3: #868ce3 !important;
+    --FundoPort4: #9c9ed1 !important;
 }
 .claro input, button, select, textarea{
     border: solid 1px black !important;

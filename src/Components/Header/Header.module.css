@@ -5,7 +5,8 @@
     justify-content: space-around;
     margin: 0px;
     height: 100vh;
-    scroll-snap-align: top;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 .header h1, .header h2{
     margin: 0;
@@ -27,5 +28,12 @@
     .divFlex{
         width: 90%;
         min-width: 300px;
+    }
+    .scroll{
+        position: absolute;
+        right: 5px;
+        bottom: 0;
+        filter: invert();
+        width: 20vw;
     }
 }

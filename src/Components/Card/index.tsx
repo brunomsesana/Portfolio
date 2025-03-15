@@ -5,6 +5,8 @@ import cssImg from '../../assets/logo/css.svg';
 import jsImg from '../../assets/logo/js.svg';
 import tsImg from '../../assets/logo/ts.svg';
 import jqueryImg from '../../assets/logo/jquery.svg'
+import bootstrapImg from '../../assets/logo/bootstrap.svg'
+import sheetjsImg from '../../assets/logo/sheetjs.svg'
 
 const techImages: Record<string, string> = {
     React: reactImg,
@@ -12,7 +14,9 @@ const techImages: Record<string, string> = {
     CSS: cssImg,
     JS: jsImg,
     TS: tsImg,
-    JQuery: jqueryImg
+    JQuery: jqueryImg,
+    Bootstrap: bootstrapImg,
+    SheetJS: sheetjsImg
 };
 
 interface CardProps {
@@ -26,9 +30,9 @@ interface CardProps {
 
 export default function Card({ nome, imagem, desc, techs, link, git } : CardProps){
     return (
-        <div className={styles.card}>
+        <a className={styles.card} href={link} target='_blank'>
             <img src={imagem} className={styles.imgProj}/>
-            <a href={link}>{nome}</a>
+            <h3>{nome}</h3>
             <p>{desc}</p>
             <div className={styles.techs}>
                 {techs.map(x => {
@@ -38,6 +42,6 @@ export default function Card({ nome, imagem, desc, techs, link, git } : CardProp
                 })}
             </div>
             {git ? <a href={git}>Github</a> : ""}
-        </div>
+        </a>
     )
 }

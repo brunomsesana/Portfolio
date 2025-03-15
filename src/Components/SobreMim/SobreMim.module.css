@@ -1,26 +1,29 @@
-.projetos{
+.sobremim{
     min-height: 100vh;
-    height: fit-content;
-    margin: 0;
     width: 100%;
+    margin: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
-.cards{
+.tudo{
+    height: 100%;
+    width: 70%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+.textos{
+    padding: 40px;
+}
 @media screen and (max-width: 900px) {
-    .cards{
-        flex-direction: column;
-    }
-    .projetos{
+    .tudo{
         height: fit-content;
+        margin-top: 10px;
+        flex-direction: column;
+        width: 100%;
     }
 }
