@@ -1,14 +1,17 @@
 import styles from "./Contato.module.css"
+import { useContext } from 'react';
+import langContext from '../Language/langContext';
 
 export default function Contato(){
+    const {lang} = useContext(langContext);
     return(
         <div className={styles.divForm + " fader"}>
             <div>
                 <form className={styles.form} id="form" action="https://formspree.io/f/xzzprqrb" method="post">
-                            <h2>Me mande uma mensagem!<br/>Te responderei assim que possível
+                            <h2>{lang == 'pt-BR' ? "Me mande uma mensagem!<br/>Te responderei assim que possível" : "Send me a text!<br/>I'll answer as soon as possible"}
                             </h2>
                             <div>
-                                <label htmlFor="nome">Nome: </label>
+                                <label htmlFor="nome">{lang == 'pt-BR' ? "Nome:" : "Name:"}</label>
                                 <input type="text" name="nome" id="nome" required/>
                             </div>
                             <div>
@@ -16,7 +19,7 @@ export default function Contato(){
                                 <input type="text" name="email" id="email" required/>
                             </div>
                             <div>
-                                <label htmlFor="msg">Mensagem: </label>
+                                <label htmlFor="msg">{lang == 'pt-BR' ? "Mensagem:" : "Text:"} </label>
                                 <textarea name="msg" id="msg" required style={{resize: "none"}}></textarea>
                             </div>
                             <div>
@@ -24,8 +27,8 @@ export default function Contato(){
                             </div>
                 </form>
                 <div>
-                    <h2>Outras maneiras de contato:</h2>
-                    <p>Celular/Whatsapp: <a href="https://wa.me/27998955070">(27)99895-5070</a><br></br>LinkedIn: <a href="https://linkedin.com/in/brunomsesana">brunomsesana</a><br></br>Github: <a href="https://github.com/brunomsesana">brunomsesana</a> <br></br> <a href="https://drive.google.com/file/d/1h35IV-WhaXx8MpjaRRyvYuPUMahelo78/view?usp=sharing">Curriculo - Bruno Machado</a></p>
+                    <h2>{lang == 'pt-BR' ? "Outras maneiras de contato:" : "Other ways to get in touch:"}</h2>
+                    <p>{lang == 'pt-BR' ? "Celular/Whatsapp:" : "Phone/Whatsapp:"} <a href="https://wa.me/+5527998955070">+55 27 99895-5070</a><br></br>LinkedIn: <a href="https://linkedin.com/in/brunomsesana">brunomsesana</a><br></br>Github: <a href="https://github.com/brunomsesana">brunomsesana</a> <br></br> <a href="https://drive.google.com/file/d/1h35IV-WhaXx8MpjaRRyvYuPUMahelo78/view?usp=sharing">{lang == 'pt-BR' ? "Curriculo - Bruno Machado" : "CV - Bruno Machado"}</a></p>
                 </div>
             </div>
         </div>
