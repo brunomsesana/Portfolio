@@ -8,7 +8,7 @@ export default function Contato(){
         <div className={styles.divForm + " fader"}>
             <div>
                 <form className={styles.form} id="form" action="https://formspree.io/f/xzzprqrb" method="post">
-                            <h2>{lang == 'pt-BR' ? "Me mande uma mensagem!<br/>Te responderei assim que possível" : "Send me a text!<br/>I'll answer as soon as possible"}
+                            <h2>{lang == 'pt-BR' ? "Me mande uma mensagem!" : "Send me a text!"}<br/>{lang == 'pt-BR' ? "Te responderei assim que possível" : "I'll answer as soon as possible"}
                             </h2>
                             <div>
                                 <label htmlFor="nome">{lang == 'pt-BR' ? "Nome:" : "Name:"}</label>
