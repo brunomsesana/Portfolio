@@ -3,7 +3,7 @@ import styles from "./Scroll.module.css"
 export default function Scroll(){
     return (
     <div className={styles.scroll} onClick={() => {window.scrollBy({
-        top:window.innerHeight - 100,
+        top:window.innerHeight,
         behavior: "smooth"
     })}}>
     <svg
