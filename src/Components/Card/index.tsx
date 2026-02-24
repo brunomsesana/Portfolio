@@ -7,6 +7,7 @@ import tsImg from '../../assets/logo/ts.svg';
 import jqueryImg from '../../assets/logo/jquery.svg'
 import bootstrapImg from '../../assets/logo/bootstrap.svg'
 import sheetjsImg from '../../assets/logo/sheetjs.svg'
+import reactNativeImg from '../../assets/logo/react native.svg'
 
 const techImages: Record<string, string> = {
     React: reactImg,
@@ -16,7 +17,8 @@ const techImages: Record<string, string> = {
     TS: tsImg,
     JQuery: jqueryImg,
     Bootstrap: bootstrapImg,
-    SheetJS: sheetjsImg
+    SheetJS: sheetjsImg,
+    "React Native": reactNativeImg
 };
 
 interface CardProps {

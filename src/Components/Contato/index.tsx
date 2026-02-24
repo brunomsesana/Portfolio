@@ -28,7 +28,7 @@ export default function Contato(){
                 </form>
                 <div>
                     <h2>{lang == 'pt-BR' ? "Outras maneiras de contato:" : "Other ways to get in touch:"}</h2>
-                    <p>{lang == 'pt-BR' ? "Celular/Whatsapp:" : "Phone/Whatsapp:"} <a href="https://wa.me/+5527998955070">+55 27 99895-5070</a><br></br>LinkedIn: <a href="https://linkedin.com/in/brunomsesana">brunomsesana</a><br></br>Github: <a href="https://github.com/brunomsesana">brunomsesana</a> <br></br> <a href="https://drive.google.com/file/d/1h35IV-WhaXx8MpjaRRyvYuPUMahelo78/view?usp=sharing">{lang == 'pt-BR' ? "Curriculo - Bruno Machado" : "CV - Bruno Machado"}</a></p>
+                    <p>{lang == 'pt-BR' ? "Celular/Whatsapp:" : "Phone/Whatsapp:"} <a href="https://wa.me/+5527998955070">+55 27 99895-5070</a><br></br>LinkedIn: <a href="https://linkedin.com/in/brunomsesana">brunomsesana</a><br></br>Github: <a href="https://github.com/brunomsesana">brunomsesana</a> <br></br> <a href={lang == 'pt-BR' ? "https://drive.google.com/file/d/1R9vocTNauyT7vcZWhm2XN9wxIh9R0rsn/view?usp=sharing" : "https://drive.google.com/file/d/1oEkr64zQR3q2KwPHZWjmg2mgDEYGIE1y/view?usp=sharing"}>{lang == 'pt-BR' ? "Curriculo - Bruno Machado" : "CV - Bruno Machado"}</a></p>
                 </div>
             </div>
         </div>
